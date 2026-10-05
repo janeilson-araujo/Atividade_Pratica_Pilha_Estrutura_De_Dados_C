@@ -52,7 +52,7 @@ PPilha esvaziarPilha(PPilha topoPilha)
 {
     if(topoPilha == NULL){
         printf("Pilha vazia");
-        return ;
+        return NULL;
     }
     if(topoPilha->proximo != NULL)
     {
