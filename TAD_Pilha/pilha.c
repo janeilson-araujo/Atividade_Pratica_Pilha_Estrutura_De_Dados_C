@@ -10,15 +10,19 @@ struct Pilha
     PPilha proximo;
 };
 
-PPilha push(char valor, PPilha topoPilha)
+PPilha push(PPilha topoPilha)
 {
     PPilha p;
+    char valor;
 
     if ((p = (PPilha)calloc(1, sizeof(Pilha))) == NULL)
     {
         printf("Erro ao Alocar memoria");
         exit(1);
     }
+
+    scanf("%c",&valor);
+
     p->proximo = topoPilha;
     p->valor = valor;
 
