@@ -6,16 +6,16 @@
 
 int main()
 {
-    char caracter;
+    char caracter[2];
     char comando[3];
     PPilha topo = NULL;
 
-    scanf();
-    while (getchar() != '\n')
+    
 
     while (true)
     {
-       ;
+        scanf("%2s", comando);
+        while (getchar() != '\n')
 
         if (strcmp(comando, "-s") == 0)
         {
@@ -29,7 +29,7 @@ int main()
         }
         else if (strcmp(comando, "-i") == 0)
         {
-            scanf("%c", caracter);
+            scanf("%1s", caracter);
             topo = push(topo, caracter);
         }
         else if (strcmp(comando, "-r") == 0)
