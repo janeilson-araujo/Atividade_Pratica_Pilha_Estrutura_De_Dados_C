@@ -17,11 +17,11 @@ PPilha push(PPilha topoPilha)
 
     if ((p = (PPilha)calloc(1, sizeof(Pilha))) == NULL)
     {
-        printf("Erro ao Alocar memoria");
         exit(1);
     }
 
     scanf("%c",&valor);
+    getchar();
 
     p->proximo = topoPilha;
     p->valor = valor;
@@ -55,7 +55,6 @@ void exibirPilha(PPilha topoPilha)
 PPilha esvaziarPilha(PPilha topoPilha)
 {
     if(topoPilha == NULL){
-        printf("Pilha vazia");
         return NULL;
     }
     if(topoPilha->proximo != NULL)

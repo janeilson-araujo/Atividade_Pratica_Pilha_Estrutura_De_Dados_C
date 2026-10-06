@@ -12,26 +12,28 @@ int main()
     while (true)
     {
         fgets(comando, sizeof(comando), stdin);
-        while (getchar() != '\n')
-            ;
 
-        if (strcmp(comando, '-s'))
+        if (strcmp(comando, "-s") == 0)
         {
+            printf("Pilha: ");
             exibirPilha(topo);
+            printf("\n");
         }
-        else if (strcmp(comando, '-c'))
+        else if (strcmp(comando, "-c") == 0)
         {
+            topo = esvaziarPilha(topo);
         }
-        else if (strcmp(comando, '-i'))
+        else if (strcmp(comando, "-i") == 0)
         {
             topo = push(topo);
         }
-        else if (strcmp(comando, '-r'))
+        else if (strcmp(comando, "-r") == 0)
         {
             topo = pop(topo);
         }
-        else if (strcmp(comando, '-f'))
+        else if (strcmp(comando, "-f") == 0)
         {
+            topo = esvaziarPilha(topo);
             exit(0);
         }
     }
