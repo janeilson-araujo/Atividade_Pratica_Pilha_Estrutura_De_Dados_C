@@ -12,6 +12,7 @@ int main()
     while (true)
     {
         fgets(comando, sizeof(comando), stdin);
+        while (getchar() != '\n');
 
         if (strcmp(comando, "-s") == 0)
         {

@@ -14,17 +14,17 @@ PPilha push(PPilha topoPilha)
 {
     PPilha p;
     char valor;
-
-    if ((p = (PPilha)calloc(1, sizeof(Pilha))) == NULL)
-    {
-        exit(1);
-    }
+    int c;
+    
+    p = (PPilha)calloc(1, sizeof(Pilha));
 
     scanf("%c",&valor);
-    getchar();
 
     p->proximo = topoPilha;
     p->valor = valor;
+
+    
+    while ((c = getchar()) != '\n' && c != EOF);
 
     return p;
 }
