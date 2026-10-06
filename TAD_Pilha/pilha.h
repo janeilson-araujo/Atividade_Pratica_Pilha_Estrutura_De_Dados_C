@@ -3,7 +3,7 @@
 
 typedef struct Pilha Pilha, *PPilha;
 
-PPilha push(PPilha topoPilha);
+PPilha push(PPilha topoPilha, char valor);
 
 PPilha pop(PPilha topoPilha);
 

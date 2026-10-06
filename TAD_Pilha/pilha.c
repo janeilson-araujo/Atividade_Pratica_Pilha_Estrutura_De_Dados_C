@@ -10,12 +10,11 @@ struct Pilha
     PPilha proximo;
 };
 
-PPilha push(PPilha topoPilha)
+PPilha push(PPilha topoPilha, char valor)
 {
     PPilha p;
-    char valor;
     int c;
-    
+
     p = (PPilha)calloc(1, sizeof(Pilha));
 
     scanf("%c",&valor);
