@@ -1,21 +1,14 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 TARGET = pilha
-SOURCES = main.c pilha.c
-OBJECTS = $(SOURCES:.c=.o)
 
-all: $(TARGET)
-
-$(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $(OBJECTS) -lm
-
-%.o: %.c pilha.h
-	$(CC) $(CFLAGS) -c $< -o $@
+all:
+	$(CC) $(CFLAGS) main.c pilha.c -o $(TARGET)
 
 clean:
-	rm -f $(OBJECTS) $(TARGET)
+	rm -f $(TARGET)
 
 .PHONY: all clean run
 
-run: $(TARGET)
+run:
 	./$(TARGET)
