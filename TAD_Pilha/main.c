@@ -6,34 +6,32 @@
 
 int main()
 {
-    char comando;
-    PPilha topo;
+    char comando[3];
+    PPilha topo = NULL;
 
     while (true)
     {
-        scanf("%c", &comando);
+        fgets(comando, sizeof(comando), stdin);
         while (getchar() != '\n')
+            ;
 
-        switch (comando)
+        if (strcmp(comando, '-s'))
         {
-        case '-s':
             exibirPilha(topo);
-
-            break;
-        case '-c':
-            topo = esvaziarPilha(topo);
-
-            break;
-        case '-i':
+        }
+        else if (strcmp(comando, '-c'))
+        {
+        }
+        else if (strcmp(comando, '-i'))
+        {
             topo = push(topo);
-
-            break;
-        case '-r':
+        }
+        else if (strcmp(comando, '-r'))
+        {
             topo = pop(topo);
-
-            break;
-        case '-f':
-
+        }
+        else if (strcmp(comando, '-f'))
+        {
             exit(0);
         }
     }
