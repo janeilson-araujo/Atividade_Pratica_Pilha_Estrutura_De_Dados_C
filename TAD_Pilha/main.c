@@ -14,9 +14,16 @@ int main()
     {
         if (strcmp(comando, "-s") == 0)
         {
-            printf("Pilha: ");
-            exibirPilha(topo);
-            printf("\n");
+            if (topo == NULL)
+            {
+                printf("Pilha vazia");
+            }
+            else
+            {
+                printf("Pilha: ");
+                exibirPilha(topo);
+                printf("\n");
+            }
         }
         else if (strcmp(comando, "-c") == 0)
         {

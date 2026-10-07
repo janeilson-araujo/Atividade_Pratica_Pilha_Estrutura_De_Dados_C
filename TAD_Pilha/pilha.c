@@ -42,8 +42,6 @@ void exibirPilha(PPilha topoPilha)
     {
         printf("%c ", topoPilha->valor);
         exibirPilha(topoPilha->proximo);
-    } else {
-        printf("Pilha vazia");
     }
 }
 
