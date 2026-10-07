@@ -6,17 +6,12 @@
 
 int main()
 {
-    char caracter[2];
     char comando[3];
+    char caracter;
     PPilha topo = NULL;
 
-    
-
-    while (true)
+    while (scanf("%2s", comando) == 1)
     {
-        scanf("%2s", comando);
-        while (getchar() != '\n')
-
         if (strcmp(comando, "-s") == 0)
         {
             printf("Pilha: ");
@@ -29,7 +24,10 @@ int main()
         }
         else if (strcmp(comando, "-i") == 0)
         {
-            scanf("%1s", caracter);
+            if (scanf(" %c", &caracter) != 1)
+            {
+                break;
+            }
             topo = push(topo, caracter);
         }
         else if (strcmp(comando, "-r") == 0)
@@ -39,7 +37,10 @@ int main()
         else if (strcmp(comando, "-f") == 0)
         {
             topo = esvaziarPilha(topo);
-            exit(0);
+            break;
         }
     }
+
+    esvaziarPilha(topo);
+    return 0;
 }

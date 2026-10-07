@@ -13,17 +13,11 @@ struct Pilha
 PPilha push(PPilha topoPilha, char valor)
 {
     PPilha p;
-    int c;
 
     p = (PPilha)calloc(1, sizeof(Pilha));
 
-    scanf("%c",&valor);
-
     p->proximo = topoPilha;
     p->valor = valor;
-
-    
-    while ((c = getchar()) != '\n' && c != EOF);
 
     return p;
 }
