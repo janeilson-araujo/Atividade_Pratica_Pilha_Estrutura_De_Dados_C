@@ -63,7 +63,7 @@ int main()
         }
     }
 
-    printf("\n%d ",topo->valor);
+    printf("\n%d",topo->valor);
 
     esvaziarPilha(topo);
     return 0;
