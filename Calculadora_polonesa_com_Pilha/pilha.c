@@ -2,14 +2,6 @@
 #include <stdlib.h>
 #include "pilha.h"
 
-typedef struct Pilha Pilha, *PPilha;
-
-struct Pilha
-{
-    int valor;
-    PPilha proximo;
-};
-
 PPilha push(PPilha topoPilha, int valor)
 {
     PPilha p;
